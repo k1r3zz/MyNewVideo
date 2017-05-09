@@ -16,7 +16,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         initView();
     }
-
+//test
     private void initView() {
 //        im=(ImageView)findViewById(R.id.im);
 //        NewsUntil.LoadImage("http://live.xljbear.com/Public/user_face/avater.jpg",im);
