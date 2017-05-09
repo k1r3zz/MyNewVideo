@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyNewVideo</string>
+    <string name="Startbutton">开始</string>
+    <string name="Stopbutton">停止</string>
+    <string name="Exitbutton">返回</string>
+    <string name="title_activity_start">Rtmp推流</string>
+    <string name="StartRtmpPush">开始推流</string>
+    <string name="PlayRtmpString">开始播放</string>
+    <string name="SwitchCamera">切换</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
