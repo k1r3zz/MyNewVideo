@@ -10,6 +10,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -34,6 +37,13 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu2);
         initView();
+        Fade fade = new Fade();
+        fade.setDuration(500);
+        Slide slide = new Slide(Gravity.LEFT);
+        slide.setDuration(500);
+        getWindow().setEnterTransition(fade);
+        getWindow().setExitTransition(fade);
+
 
     }
 

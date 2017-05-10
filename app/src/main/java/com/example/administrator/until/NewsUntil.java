@@ -3,6 +3,7 @@ package com.example.administrator.until;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.example.administrator.mynewvideo.R;
@@ -128,5 +129,17 @@ public class NewsUntil {
         Date date = new Date(lt * 1000L);
         res = simpleDateFormat.format(date);
         return res;
+    }
+
+    /**
+     * 像素转换
+     *
+     * @param context
+     * @param dp
+     * @return
+     */
+    public static int dp2px(Context context, int dp) {
+        context.getResources().getDisplayMetrics();
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
 }

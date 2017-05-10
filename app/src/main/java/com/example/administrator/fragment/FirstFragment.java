@@ -1,6 +1,7 @@
 package com.example.administrator.fragment;
 
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -117,7 +118,8 @@ public class FirstFragment extends Fragment {
                     Intent intent = new Intent();
                     intent.setClass(getActivity(), RoomActivity.class);
                     intent.putExtra("roomid", rooms.get(position).getId());
-                    startActivity(intent);
+                   // startActivity(intent);
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity(),view, "share").toBundle());
                 } else {
                     Toast.makeText(getActivity(), "主播在赶来的路上哦", Toast.LENGTH_SHORT).show();
                 }
@@ -127,14 +129,15 @@ public class FirstFragment extends Fragment {
         roomlist.addOnScrollListener(new EndlessRecyclerOnScrollListener(gridLayoutManager) {
             @Override
             public void onLoadMore(int currentPage) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                        swipeRefreshLayout.setRefreshing(false);
+//                    }
+//                }, 3000);
+                Toast.makeText(getActivity(), "11234", Toast.LENGTH_SHORT).show();
 
-                        Toast.makeText(getActivity(), "11234", Toast.LENGTH_SHORT).show();
-                        swipeRefreshLayout.setRefreshing(false);
-                    }
-                }, 3000);
             }
         });
 
